@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090d1d">
+  <title>Tempora | Temperature Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <nav class="navbar">
+      <a href="#" class="logo"><span>°</span> TEMPORA</a>
+      <span class="nav-label">TEMPERATURE CONVERTER</span>
+    </nav>
+
+    <section class="converter">
+      <div class="eyebrow"><span class="live-dot"></span> SMART CONVERSION TOOL</div>
+      <h1>Temperature <span>Converter.</span></h1>
+      <p class="subtitle">Convert temperatures with accuracy and ease.</p>
+
+      <div class="converter-card">
+        <div class="card-heading">
+          <div>
+            <h2>Convert temperature</h2>
+            <p>Enter a value and select its unit.</p>
+          </div>
+          <div class="thermometer">🌡️</div>
+        </div>
+
+        <form id="converterForm" novalidate>
+          <label for="temperature">Temperature value</label>
+          <input
+            type="number"
+            id="temperature"
+            placeholder="Enter temperature"
+            step="any"
+          >
+
+          <label for="unit">Convert from</label>
+          <select id="unit">
+            <option value="celsius">Celsius (°C)</option>
+            <option value="fahrenheit">Fahrenheit (°F)</option>
+            <option value="kelvin">Kelvin (K)</option>
+          </select>
+
+          <p id="error" class="error" role="alert"></p>
+
+          <button type="submit" class="convert-btn">
+            Convert Temperature <span>→</span>
+          </button>
+        </form>
+
+        <section id="results" class="results" aria-live="polite" hidden>
+          <div class="result-heading">
+            <h3>Conversion Results</h3>
+            <span class="success-label">✓ Converted</span>
+          </div>
+
+          <div class="result-grid">
+            <div class="result-box">
+              <span>Celsius</span>
+              <strong id="celsiusResult">--</strong>
+              <small>°C</small>
+            </div>
+            <div class="result-box featured">
+              <span>Fahrenheit</span>
+              <strong id="fahrenheitResult">--</strong>
+              <small>°F</small>
+            </div>
+            <div class="result-box">
+              <span>Kelvin</span>
+              <strong id="kelvinResult">--</strong>
+              <small>K</small>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="info-row">
+        <div class="info-icon">✦</div>
+        <p><strong>Accurate conversions.</strong> Results are calculated instantly using standard temperature formulas.</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>Designed & developed by <strong>Neha Bhatti</strong></p>
+      <span>© <span id="year"></span> TEMPORA</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
